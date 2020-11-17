@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Shop = () => {
-    const product10=fakeData.slice(0,10);
+    const product10=fakeData.slice(0,4);
     const [product,setProduct]=useState(product10)
    const [cart, setCart]=useState([])
 

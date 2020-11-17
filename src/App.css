@@ -1,0 +1,38 @@
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+.border-custome{
+    border-bottom: 10px  solid #9a91f0c7!important;
+    display: inline-block;
+}
+::-webkit-scrollbar-track{
+    border: 5px solid #23294300;
+    box-shadow: inset 0 0 2.5px 5px rgba(107, 91, 107, .5);
+    height: 100%;
+    border-radius:5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #786bf2a6;
+    border-radius:5px;
+    box-shadow: inset 0 0 2.5px 2px rgba(122, 115, 224, 0.5);
+}
+::selection {
+    color: white;
+    background: rgba(243, 148, 138, 0.856);
+  }
+.progressMainWrapper{
+    background-color: rgba(0, 0, 0, 0);
+    height: 1px;
+    position:sticky;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+}
+
+.progressMainStyle{
+height: 3px;
+background-color: salmon;
+}

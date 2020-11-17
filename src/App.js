@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
@@ -19,13 +19,35 @@ import Shipment from './components/Shipment/Shipment';
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivetRoute from './components/PrivetRoute/PrivetRoute';
+import Footer from './components/Footer/Footer';
 
 export const userContext=createContext();
 function App() {
+
+  const [scrollTop, setScrollTop] = useState(0);
+  const onscroll = () => {
+    const WinScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight- document.documentElement.clientHeight;
+
+    const scrolled = (WinScroll / height) * 100;
+    setScrollTop(scrolled)
+  }
+  useEffect( () => {
+    window.addEventListener('scroll', onscroll)
+    return() => window.removeEventListener('scroll', onscroll)
+  }, []);
+
+
+
   const [loginUser,setLoginUser]=useState({})
   console.log(loginUser);
   return (
     <userContext.Provider value={[loginUser,setLoginUser]} >
+      <div className='progressMainWrapper'>
+        <div className="progressMainStyle" style= {{ width: `${scrollTop}%` }}>
+
+        </div>
+      </div>
 
       <Router>
         <h3>Email: {loginUser.email }</h3>
@@ -61,6 +83,7 @@ function App() {
           <div className="row ">
             <div className="col-5 offset-7 border">
             <Feedback/>
+            <Footer></Footer>
             </div>
           </div>
           

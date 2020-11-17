@@ -1,0 +1,35 @@
+$bg-color-primary: #a1cec865;
+
+
+
+$brandColor: #275A53;
+$brandColor2: #1a3b37;
+$primarytext-clr: #fff;
+$thirdtext-clr: rgb(105, 105, 105);
+$secondarytext-clr: rgb(214, 214, 214);
+$color-primary: red;
+
+
+
+.social-media{
+    padding: 0px !important;
+}
+
+.footer-mainsection{
+    background-color: $brandColor!important;  ;
+    color: $primarytext-clr;
+
+     .col-2 p{
+        line-height: 7px;
+        transition:  0.3s ease-in-out;
+    }
+     .col-2 p:hover{
+        margin-left:4px;
+    }
+    ul li a{
+        font-size: 28px;
+    }
+    ul li a:hover{
+        color: $secondarytext-clr!important;
+    }
+}
