@@ -46,7 +46,7 @@ const Review = () => {
                 <textarea className="text-area-input  my-2"  name="Company Name" onBlur={ descriptionchange } placeholder="Enter you review here" ref={register} /><br></br>
                 <textarea className="text-area-message  my-2" name="description" onBlur={ (e) => setReview(e.target.value) }placeholder="Job Name(If u do!)"></textarea><br></br>
             
-                <button type="submit" onClick={handlerReview} className="mb-5 btn-main"> submit</button>
+                <button type="submit" onClick={handlerReview} className="mb-5 btn-main" > submit</button>
             </form>
             
         </div>

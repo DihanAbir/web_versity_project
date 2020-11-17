@@ -15,12 +15,12 @@
 
 ::-webkit-scrollbar-thumb{
     background: #786bf2a6;
-    border-radius:5px;
+    border-radius:10px;
     box-shadow: inset 0 0 2.5px 2px rgba(122, 115, 224, 0.5);
 }
 ::selection {
     color: white;
-    background: rgba(243, 148, 138, 0.856);
+    background: rgb(245, 33, 10);
   }
 .progressMainWrapper{
     background-color: rgba(0, 0, 0, 0);
@@ -33,6 +33,6 @@
 }
 
 .progressMainStyle{
-height: 3px;
-background-color: salmon;
+height: 8px;
+background-color: rgb(255, 37, 13);
 }
